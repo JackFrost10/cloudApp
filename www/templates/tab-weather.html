@@ -1,0 +1,41 @@
+
+<ion-view view-title="{{location}}">
+  <ion-content class="padding">
+  <div class="list card">
+
+  <div class="item item-avatar">
+    <img src="{{icon}}">
+    <h2>{{weather}}</h2>
+    <p>{{temp}}</p>
+  </div>
+
+  <div class="item item-body">
+    <div class ="row">
+      <div class="col">Humidity:</div> 
+      <div class="col">
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: {{humi}};">
+          {{humi}}
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">Wind Speed:</div>
+      <div class="col balanced"> {{windSpeed}} kph</div>
+    </div>
+    <div class="row">
+      <div class="col">Gustiness:</div> 
+      <div class="col balanced">{{windGust}} kph</div>
+    </div>
+    <div class="row">
+      <div class="col">{{windStr}}</div>
+    </div>
+  </div>
+
+  <a class="item item-icon-left assertive" href="#">
+    <i class="icon ion-clock"></i>
+    <p>{{localTime | date}}</p>
+  </a>
+
+</div>
+  </ion-content>
+</ion-view>
