@@ -1,40 +1,18 @@
 
 <ion-view class="bar-calm" view-title="Cloud Forecast">
   <div class="bar bar-subheader bar-dark">
-    <h2 class="title">{{location}}</h2>
+    <h2 class="title">{{date}}</h2>
   </div>
   <ion-content class="padding has-subheader">
     <div class="list card" ng-repeat="x in periods">
-      <div class="item item-avatar">
+      <div class="item item-divider">
         <img src="{{x.icon_url}}">
-        <h2>{{weather}}</h2>
-        <p>{{x.title}}</p>
+        <b>{{x.title}}</b>
       </div>
 
       <div class="item item-body">
-        <div class ="row">
-          <small><b><div class="col">Humidity:</div></b></small>
-            <div class="col">
-              <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: {{humi}};">
-                {{humi}}
-              </div>
-            </div>
-        </div>
-        
-        <div class="row">
-          <div class="col"><small><b>Wind Speed:</b></small></div>
-          <div class="col balanced"><small><b>{{windSpeed}} kph</b></small></div>
-        </div>
-        <div class="row">
-          <div class="col"><small><b>Gustiness:</b></small></div> 
-          <div class="col balanced"><small><b>{{windGust}} kph</b></small></div>
-        </div>
-      </div>
-
-      <a class="item item-icon-left assertive" href="#">
-        <i class="icon ion-clock"></i>
         <p>{{x.fcttext_metric}}</p>
-      </a>
+      </div>
     </div>
   </ion-content>
 </ion-view>

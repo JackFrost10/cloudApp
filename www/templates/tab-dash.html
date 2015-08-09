@@ -1,26 +1,33 @@
-<ion-view view-title="Dashboard">
+<ion-view view-title="Cloud Forecast">
   <ion-content class="padding">
     <div class="list card">
-      <div class="item item-divider">Recent Updates</div>
+      <div class="item item-divider"><b>Astronomy</b></div>
       <div class="item item-body">
         <div>
-          There is a fire in <b>sector 3</b>
+          <img src="../img/{{moonPhase}}.png"><b>{{moonPhase}}</b><br />
+          <i class="icon ion-clock"></i>&nbsp;Local Time: <b>{{currentTimeH}}:{{currentTimeM}} PHT</b>
         </div>
       </div>
     </div>
     <div class="list card">
-      <div class="item item-divider">Health</div>
+      <div class="item item-divider"><b>Today</b></div>
       <div class="item item-body">
-        <div>
-          You ate an apple today!
+        <div class="row">
+          <div class="col">
+            <i class="icon ion-android-alarm-clock"></i>&nbsp;<b>Sunrise:</b> 
+          </div>
+          <div class="col">
+            <b>{{sunriseHour}}:{{sunriseMin}}</b>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="list card">
-      <div class="item item-divider">Upcoming</div>
-      <div class="item item-body">
-        <div>
-          You have <b>29</b> meetings on your calendar tomorrow.
+        <div class="row">
+          <div class="col">
+            <i class="icon ion-planet"></i> <b>Sunset:</b>
+          </div>
+          <div class="col">
+           <b>{{sunsetHour}}:{{sunsetMin}}</b>
+          </div>
+        </div>
         </div>
       </div>
     </div>
